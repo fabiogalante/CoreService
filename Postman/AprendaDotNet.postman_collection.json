@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "51595c62-073a-3094-728b-bbb95b33d9d4",
+		"name": "AprendaDotNet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CoreService",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:50000/api/post/GetCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50000",
+							"path": [
+								"api",
+								"post",
+								"GetCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\": \"Test Blog Title 1\",\n\t\"Description\": \"Welcome to Test Blog Title 1\",\n\t\"CategoryId\": 2,\n\t\"CreatedDate\": \"2018-09-02 17:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:50000/api/post/AddPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50000",
+							"path": [
+								"api",
+								"post",
+								"AddPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Title\": \"Test Blog Title 1\",\n\t\"Description\": \"Welcome to Test Blog Title Modify\",\n\t\"CategoryId\": 1,\n\t\"CreatedDate\": \"2018-09-02 17:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:50000/api/post/UpdatePost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50000",
+							"path": [
+								"api",
+								"post",
+								"UpdatePost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPosts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:50000/api/post/GetPosts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50000",
+							"path": [
+								"api",
+								"post",
+								"GetPosts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:50000/api/post/GetPost/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "50000",
+							"path": [
+								"api",
+								"post",
+								"GetPost",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Obter Selecoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/selecao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selecao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar selecao",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"NomeSelecao\": \"Arábia Saudita\",\n    \"Continente\": \"Ásia\",\n    \"NumeroParticipacoes\": 5,\n    \"MelhorResultado\": \"Oitavas de final (1994)\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/selecao/criarselecao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selecao",
+						"criarselecao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Selecao por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/selecao/2004/obterselecaoporid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selecao",
+						"2004",
+						"obterselecaoporid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar selecao",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\": 2002,\n    \"NomeSelecao\": \"Rússia\",\n    \"Continente\": \"Europa\",\n    \"NumeroParticipacoes\": 11,\n    \"MelhorResultado\": \"4° lugar (1966)\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/selecao/atualizarselecao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selecao",
+						"atualizarselecao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir seleção",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/selecao/2003/excluirselecao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"selecao",
+						"2003",
+						"excluirselecao"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
