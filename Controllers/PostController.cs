@@ -43,7 +43,7 @@ namespace CoreServices.Controllers
         }
 
         [HttpGet]
-        [Route("GetPost")]
+        [Route("GetPost/{postId}")]        
         public async Task<IActionResult> GetPost(int? postId)
         {
             if (postId == null)
